@@ -37,89 +37,72 @@
         <button
           class="btn btn-success"
           data-bs-toggle="modal"
-          data-bs-target="#formModal"
+          data-bs-target="#modal"
         >
           Add Task
         </button>
       </div>
-      <!-- Todo: Create a modal with a form to add tasks -->
+      <!-- new modal here from getbootstrap.com -->
       <div
-        class="“modal"
-        fade”
-        id="“formModal”"
-        tabindex="“-1”"
-        aria-labelledby="“formModalLabel”"
-        aria-hidden="“true”"
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        aria-labelledby="modalLabel"
+        aria-hidden="true"
       >
-        <div class="“modal-dialog”">
-          <div class="“modal-content”">
-            <div class="“modal-header”">
-              <h5 class="“modal-title”" id="“formModalLabel”">Add New Task</h5>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Add New Task</h5>
               <button
-                type="“button”"
-                class="“close”"
-                data-bs-dismiss="“modal”"
-                aria-label="“Close”"
-              >
-                <span>&times;</span>
-              </button>
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-            <div class="“modal-body”">
-              <form id="“taskForm”">
-                <div class="“form-group”">
-                  <label for="“taskTitle”">Task Title</label>
-                  <input
-                    type="“text”"
-                    class="“form-control”"
-                    id="“taskTitle”"
-                    placeholder="“Enter"
-                    task
-                    name”
-                    required
-                  />
-                </div>
-                <div class="“form-group”">
-                  <label for="“taskDate”">Task Date</label>
-                  <input
-                    type="“text”"
-                    class="“form-control”"
-                    id="“taskDate”"
-                    placeholder="“Task"
-                    date”
-                    required
-                  />
-                </div>
-                <div class="“form-group”">
-                  <label for="“taskDescription”"> Task Description</label>
-                  <textarea
-                    class="“form-control”"
-                    id="“taskDescription”"
-                    rows="“3”"
-                    placeholder="“Enter"
-                    task
-                    description”
-                    required
-                  ></textarea>
-                </div>
-              </form>
+            <div class="modal-body">
+              <!-- task title, task date, task description -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="taskTitle"
+                  placeholder="add task title here"
+                />
+                <label for="floatingInput">Task Title</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  id="taskDueDate"
+                  placeholder="enter date here"
+                />
+                <label for="floatingInput">Task Date</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="taskDescription"
+                  placeholder="describe task here"
+                />
+                <label for="floatingInput">Task Description</label>
+              </div>
             </div>
-            <div class="“modal-footer”">
+            <div class="modal-footer">
               <button
-                type="“button”"
-                class="“btn"
-                btn-secondary”
-                data-bs-dismiss="“modal”"
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <button
-                type="“submit”"
-                class="“btn"
-                btn-primary”
-                id="“taskbutton”"
-                form="“taskForm”"
-              >
-                Add Task
+              <button type="button" class="btn btn-primary" id="save-button">
+                Save Changes
               </button>
             </div>
           </div>
