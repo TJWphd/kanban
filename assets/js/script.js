@@ -9,7 +9,7 @@ function generateTaskId() {
   } else {
     nextId++;
   }
-  localStorage.setItem(JSON.stringify(nextId));
+  localStorage.setItem("nextId", JSON.stringify(nextId));
   return nextId;
 }
 
@@ -54,9 +54,11 @@ function handleAddTask(event) {
   const taskDueDate = $("#taskDueDate").val();
   const taskDescription = $("#taskDescription").val();
   const task = {
+    id: generateTaskId(),
     title: taskTitle,
     date: taskDueDate,
     description: taskDescription,
+    status: "to-do",
   };
   taskList.push(task);
   localStorage.setItem("tasks", JSON.stringify(taskList));
