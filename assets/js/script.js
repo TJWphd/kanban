@@ -18,7 +18,6 @@ function createTaskCard(task) {
   const card = $("<div></div>")
     .addClass("task-card", "ui-state-default")
     .draggable({
-      // revert:
       start: function () {
         $(this).addClass("dragging");
       },
@@ -26,8 +25,17 @@ function createTaskCard(task) {
         $(this).removeClass("dragging");
       },
     });
-  console.log(card);
-  card.css("background-color", getTaskColor(task.taskDueDate));
+  const cardBody = `
+<div class="card-body">
+<h5 class="card-title">${task.title}</h5>
+<p class="card-text:>${task.date}</p>
+<p class="card-text">${task.description}</p>
+</div>
+`;
+  card.append(cardBody);
+  return card;
+  // console.log(card);
+  // card.css("background-color", getTaskColor(task.taskDueDate));
 }
 
 // Todo: create a function to render the task list
@@ -58,11 +66,12 @@ function handleAddTask(event) {
     title: taskTitle,
     date: taskDueDate,
     description: taskDescription,
-    status: "to-do",
+    status: "todo-cards",
   };
   taskList.push(task);
   localStorage.setItem("tasks", JSON.stringify(taskList));
   renderTaskList();
+  $("#modal").modal("hide");
 }
 
 // Todo: create a function to handle deleting a task
@@ -78,6 +87,7 @@ function handleDrop(event, ui) {
   console.log(newStatus);
   console.log(droppedTaskId);
 }
+
 const task =
   // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
   $(document).ready(function () {
@@ -86,6 +96,6 @@ const task =
     // $("$taskDueDate").datepicker({ changeMonth: true, changeYear: true });
     $("#save-button").click(handleAddTask);
 
-    //     const taskButtonEl = document.getElementById("taskButton");
-    //   taskButtonEl.addEventListener("click", handleAddTask);
+    // const taskButtonEl = document.getElementById("taskButton");
+    // taskButtonEl.addEventListener("click", handleAddTask);
   });
