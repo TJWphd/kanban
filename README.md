@@ -7,10 +7,10 @@ This project is a basic kanban (a visual work management task board developed by
 As a new developer, I learned how modals work and how to use JS to create HMTL elements and CSS styles and how to manipulate the DOM to make a fun, interactive and user-friendly web app.
 
 ## deployment
+![kanbanScreenshot](https://github.com/user-attachments/assets/67e0d841-cb99-48a7-b255-c07e18061ea6)
 
 GitHub Repo: https://github.com/TJWphd/kanban
 Deployment link: https://tjwphd.github.io/kanban
-Screenshot: ./assets/images/kanbanScreenshot.png
 
 ## credits
 
