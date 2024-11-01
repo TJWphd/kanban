@@ -1,18 +1,19 @@
 # Task Board Starter Code
 
-## description
+## Description
 
 This project is a basic kanban (a visual work management task board developed by Toyota's legendary lean process improvement team). The user can enter tasks with due dates and descriptions. These tasks are transformed into draggable objects that are then moved between the "to-do" list, the "in-process" list, and the "completed" list. The draggability gives a real-world feel to this online task board.
 
 As a new developer, I learned how modals work and how to use JS to create HMTL elements and CSS styles and how to manipulate the DOM to make a fun, interactive and user-friendly web app.
 
 ## deployment
+
 ![kanbanScreenshot](https://github.com/user-attachments/assets/67e0d841-cb99-48a7-b255-c07e18061ea6)
 
 GitHub Repo: https://github.com/TJWphd/kanban
 Deployment link: https://tjwphd.github.io/kanban
 
-## credits
+## Credits
 
 Thanks to John Young, Zac Warner, Alistair Rowden, Ntombifuthi Motaung: Educational team at edX/UCB FS Bootcamp, for instruction and help. Specific credits to follow.
 
