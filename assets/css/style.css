@@ -18,3 +18,11 @@ body {
 .ui-draggable {
   z-index: 5000;
 }
+
+.bg-warning {
+  background-color: yellow;
+}
+
+.bg-danger {
+  background-color: red;
+}
